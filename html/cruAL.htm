@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<!--Created by Ardora - www.webardora.net-->
+<!--ArdoraCW-->
+<!--bajo licencia Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)
+para otros usos contacte con el autor-->
+<html lang="es">
+<head><meta charset="utf-8" /><title>CRUCIGRAMA</title>
+<link type="text/css" href="cruAL_resources/css/ardoraCW.css" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="shortcut icon" href="https://i.ibb.co/rw903YN/2231431-removebg-preview.png" type="image/x-icon">
+<script language="javascript" type="text/javascript" src="cruAL_resources/js/jquery.js"></script>
+<script language="javascript" type="text/javascript" src="cruAL_resources/js/jquery-ui.min.js"></script>
+<script language="javascript" type="text/javascript" src="cruAL_resources/js/jquery.ui.touch-punch.min.js"></script>
+<script language="javascript" type="text/javascript" src="cruAL_resources/js/ardoraCWCFG.js"></script>
+<script language="javascript" type="text/javascript" src="cruAL_resources/js/ardoraScorm.js"></script>
+<script language="javascript" type="text/javascript" src="cruAL_resources/js/ardoraCW.js"></script>
+<script language="javascript" type="text/javascript" src="cruAL_resources/js/ardoraTab.js"></script>
+<script defer src="../js/app.js"></script>
+</head>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+      <a class="navbar-brand" href="#"><i class="fas fa-calculator"></i> MatrixEdu</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                  <a class="nav-link" href="../index.html"><i class="fas fa-home"></i> Inicio</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="html/algebra.html"><i class="fas fa-book"></i> Álgebra Lineal</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="gauss.html"><i class="fas fa-table"></i> Gauss-Jordan</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="cramer.html"><i class="fas fa-columns"></i> Método de Cramer</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="crout.html"><i class="fas fa-layer-group"></i> Crout</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="doolittle.html"><i class="fas fa-stream"></i> Doolittle</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="cholesky.html"><i class="fas fa-square-root-alt"></i> Cholesky</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="calculadora.html"><i class="fas fa-calculator"></i> Calculadora de Ecuaciones</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="cruAL.htm "><i class="fas fa-tasks"></i> Actividades</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="cuestionario.html"><i class="fas fa-question-circle"></i> Cuestionario Final</a>
+              </li>
+              
+          </ul>
+      </div>
+  </div>
+</nav>
+
+<body onLoad="loadPage()" onbeforeunload="unloadPage()" onUnload="unloadPage()">
+  <div class="container mt-4">
+    <div class="card" style="background-color: #0d7c46;">
+      <div class="card-header text-center bg-dark text-white">
+        <h3>Crucigrama</h3>
+      </div>
+<div id="ardoraMain">
+<div id="ardoraEnu"><SPAN style="font-size:12px;color:#000000">Resuelve el crucigrama, llenando las palabras en horizontal</SPAN></div>
+  <div id="ardoraAct">
+  <table id="tableGame">
+<tr>
+<td class="activeCell"><input id="C0_0" name="C0_0" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C1_0" name="C1_0" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C2_0" name="C2_0" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C3_0" name="C3_0" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C4_0" name="C4_0" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C5_0" name="C5_0" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C6_0" name="C6_0" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C7_0" name="C7_0" type="text" class="cell" maxlength="1"/></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="activeCell"><input id="C12_0" name="C12_0" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C13_0" name="C13_0" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C14_0" name="C14_0" type="text" class="cell" maxlength="1"/></td>
+</tr>
+<tr>
+<td class="hidetd"></td>
+<td class="activeCell"><input id="C1_1" name="C1_1" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C2_1" name="C2_1" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C3_1" name="C3_1" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C4_1" name="C4_1" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C5_1" name="C5_1" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C6_1" name="C6_1" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C7_1" name="C7_1" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C8_1" name="C8_1" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C9_1" name="C9_1" type="text" class="cell" maxlength="1"/></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+</tr>
+<tr>
+<td class="activeCell"><input id="C0_2" name="C0_2" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C1_2" name="C1_2" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C2_2" name="C2_2" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C3_2" name="C3_2" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C4_2" name="C4_2" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C5_2" name="C5_2" type="text" class="cell" maxlength="1"/></td>
+<td class="hidetd"></td>
+<td class="activeCell"><input id="C7_2" name="C7_2" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C8_2" name="C8_2" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C9_2" name="C9_2" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C10_2" name="C10_2" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C11_2" name="C11_2" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C12_2" name="C12_2" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C13_2" name="C13_2" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C14_2" name="C14_2" type="text" class="cell" maxlength="1"/></td>
+</tr>
+<tr>
+<td class="activeCell"><input id="C0_3" name="C0_3" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C1_3" name="C1_3" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C2_3" name="C2_3" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C3_3" name="C3_3" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C4_3" name="C4_3" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C5_3" name="C5_3" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C6_3" name="C6_3" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C7_3" name="C7_3" type="text" class="cell" maxlength="1"/></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+</tr>
+<tr>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="activeCell"><input id="C2_4" name="C2_4" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C3_4" name="C3_4" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C4_4" name="C4_4" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C5_4" name="C5_4" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C6_4" name="C6_4" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C7_4" name="C7_4" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C8_4" name="C8_4" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C9_4" name="C9_4" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C10_4" name="C10_4" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C11_4" name="C11_4" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C12_4" name="C12_4" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C13_4" name="C13_4" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C14_4" name="C14_4" type="text" class="cell" maxlength="1"/></td>
+</tr>
+<tr>
+<td class="activeCell"><input id="C0_5" name="C0_5" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C1_5" name="C1_5" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C2_5" name="C2_5" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C3_5" name="C3_5" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C4_5" name="C4_5" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C5_5" name="C5_5" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C6_5" name="C6_5" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C7_5" name="C7_5" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C8_5" name="C8_5" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C9_5" name="C9_5" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C10_5" name="C10_5" type="text" class="cell" maxlength="1"/></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+</tr>
+<tr>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="activeCell"><input id="C4_6" name="C4_6" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C5_6" name="C5_6" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C6_6" name="C6_6" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C7_6" name="C7_6" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C8_6" name="C8_6" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C9_6" name="C9_6" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C10_6" name="C10_6" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C11_6" name="C11_6" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C12_6" name="C12_6" type="text" class="cell" maxlength="1"/></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+</tr>
+<tr>
+<td class="hidetd"></td>
+<td class="activeCell"><input id="C1_7" name="C1_7" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C2_7" name="C2_7" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C3_7" name="C3_7" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C4_7" name="C4_7" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C5_7" name="C5_7" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C6_7" name="C6_7" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C7_7" name="C7_7" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C8_7" name="C8_7" type="text" class="cell" maxlength="1"/></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+</tr>
+<tr>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="activeCell"><input id="C4_8" name="C4_8" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C5_8" name="C5_8" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C6_8" name="C6_8" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C7_8" name="C7_8" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C8_8" name="C8_8" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C9_8" name="C9_8" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C10_8" name="C10_8" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C11_8" name="C11_8" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C12_8" name="C12_8" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C13_8" name="C13_8" type="text" class="cell" maxlength="1"/></td>
+<td class="hidetd"></td>
+</tr>
+<tr>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="activeCell"><input id="C2_9" name="C2_9" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C3_9" name="C3_9" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C4_9" name="C4_9" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C5_9" name="C5_9" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C6_9" name="C6_9" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C7_9" name="C7_9" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C8_9" name="C8_9" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C9_9" name="C9_9" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C10_9" name="C10_9" type="text" class="cell" maxlength="1"/></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+</tr>
+<tr>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="activeCell"><input id="C5_10" name="C5_10" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C6_10" name="C6_10" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C7_10" name="C7_10" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C8_10" name="C8_10" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C9_10" name="C9_10" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C10_10" name="C10_10" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C11_10" name="C11_10" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C12_10" name="C12_10" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C13_10" name="C13_10" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C14_10" name="C14_10" type="text" class="cell" maxlength="1"/></td>
+</tr>
+</table>
+<canvas id="ardoraActCanvas" width="2px" height="2px"></canvas>
+<div id="buttonDir"><canvas id="ardoraButtonDirCanvas" width="40px" height="40px"></canvas></div>
+<div id="defIma"></div>
+  </div>
+<div id="ardoraTab">
+  <canvas id="ardoraTabCanvas" width="70" height="147"></canvas>
+  <div id="buttonOk"><canvas id="buttonOkCanvas" width="70" height="70"></canvas></div>
+</div></div>
+<div id="ardoraAlumSCORM"><p></p></div>
+</div>
+</div>
+<section>
+  <div class="container">
+      <a href="cholesky.html" class="btn btn-primary mt-3"><i class="fas fa-arrow-circle-right"></i> Continuar</a>
+  </div>
+</section>
+</body>
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-3">
+  <div class="container">
+      <p>&copy; 2024 Universidad Francisco de Paula Santander | Ingeniería de Sistemas</p>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</html>

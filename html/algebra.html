@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducción a Álgebra Lineal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="shortcut icon" href="https://i.ibb.co/rw903YN/2231431-removebg-preview.png" type="image/x-icon">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><i class="fas fa-calculator"></i> MatrixEdu</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html"><i class="fas fa-home"></i> Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="html/algebra.html"><i class="fas fa-book"></i> Álgebra Lineal</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gauss.html"><i class="fas fa-table"></i> Gauss-Jordan</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-columns"></i> Método de Cramer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-layer-group"></i> Crout</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-stream"></i> Doolittle</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-square-root-alt"></i> Cholesky</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-calculator"></i> Calculadora de Ecuaciones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-tasks"></i> Actividades</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-question-circle"></i> Cuestionario Final</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="bg-light py-5 text-center">
+        <div class="container">
+            <h1 class="display-4">Introducción al Álgebra Lineal</h1>
+            <p class="lead">Descubre los conceptos fundamentales y la importancia de esta poderosa herramienta matemática.</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container my-5">
+        <section class="mb-5">
+            <h2 class="text-primary"><i class="fas fa-info-circle"></i> ¿Qué es el Álgebra Lineal?</h2>
+            <p>El álgebra lineal es una rama de las matemáticas que se enfoca en el estudio de vectores, matrices, sistemas de ecuaciones lineales y transformaciones lineales. Es una herramienta clave en diversas áreas como la ingeniería, la física, la informática y la economía.</p>
+            <div class="text-center my-3">
+                <img src="https://i.ibb.co/v4v6mBw/Matriz4-removebg-preview.png" alt="Representación de álgebra lineal" class="img-fluid rounded shadow">
+            </div>
+        </section>
+
+        <section class="mb-5">
+            <h2 class="text-success"><i class="fas fa-cogs"></i> Aplicaciones del Álgebra Lineal</h2>
+            <div class="row">
+                <div class="col-md-4 text-center">
+                    <i class="fas fa-robot fa-3x text-primary mb-3"></i>
+                    <h4>Inteligencia Artificial</h4>
+                    <p>El álgebra lineal es esencial para entrenar modelos de machine learning y redes neuronales.</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <i class="fas fa-globe fa-3x text-success mb-3"></i>
+                    <h4>Gráficos Computacionales</h4>
+                    <p>Utilizada para manejar transformaciones y animaciones en diseño gráfico y videojuegos.</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <i class="fas fa-chart-line fa-3x text-warning mb-3"></i>
+                    <h4>Economía y Finanzas</h4>
+                    <p>Aplica en la optimización y análisis de modelos económicos complejos.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="text-warning mb-4"><i class="fas fa-book-reader"></i> Conceptos Fundamentales</h2>
+            <div class="accordion" id="conceptosFundamentales">
+                <!-- Matrices y sus operaciones -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingMatrices">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMatrices" aria-expanded="false" aria-controls="collapseMatrices">
+                            <i class="fas fa-arrow-right"></i> Matrices y sus operaciones
+                        </button>
+                    </h2>
+                    <div id="collapseMatrices" class="accordion-collapse collapse" aria-labelledby="headingMatrices" data-bs-parent="#conceptosFundamentales">
+                        <div class="accordion-body">
+                            Las matrices son arreglos bidimensionales de números que permiten representar y resolver sistemas de ecuaciones lineales, realizar transformaciones lineales y modelar problemas en diversas disciplinas. Sus operaciones incluyen suma, resta, multiplicación y cálculo de inversas, fundamentales para el análisis matemático y computacional.
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Determinantes y propiedades -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingDeterminantes">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDeterminantes" aria-expanded="false" aria-controls="collapseDeterminantes">
+                            <i class="fas fa-arrow-right"></i> Determinantes y propiedades
+                        </button>
+                    </h2>
+                    <div id="collapseDeterminantes" class="accordion-collapse collapse" aria-labelledby="headingDeterminantes" data-bs-parent="#conceptosFundamentales">
+                        <div class="accordion-body">
+                            El determinante de una matriz es un valor escalar que permite determinar propiedades clave, como si una matriz es invertible. Se utiliza en cálculos como el volumen de un espacio definido por vectores y en la resolución de sistemas de ecuaciones lineales mediante la regla de Cramer.
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Espacios vectoriales -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingEspacios">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEspacios" aria-expanded="false" aria-controls="collapseEspacios">
+                            <i class="fas fa-arrow-right"></i> Espacios vectoriales
+                        </button>
+                    </h2>
+                    <div id="collapseEspacios" class="accordion-collapse collapse" aria-labelledby="headingEspacios" data-bs-parent="#conceptosFundamentales">
+                        <div class="accordion-body">
+                            Los espacios vectoriales son conjuntos de vectores que cumplen ciertas propiedades bajo las operaciones de suma y multiplicación escalar. Son la base de conceptos como subespacios, bases y dimensiones, esenciales para describir sistemas y fenómenos en matemáticas y física.
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Transformaciones lineales -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTransformaciones">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTransformaciones" aria-expanded="false" aria-controls="collapseTransformaciones">
+                            <i class="fas fa-arrow-right"></i> Transformaciones lineales
+                        </button>
+                    </h2>
+                    <div id="collapseTransformaciones" class="accordion-collapse collapse" aria-labelledby="headingTransformaciones" data-bs-parent="#conceptosFundamentales">
+                        <div class="accordion-body">
+                            Una transformación lineal es una función que mapea vectores de un espacio a otro preservando las operaciones de suma y multiplicación escalar. Estas son clave para entender rotaciones, proyecciones y cambios de base en el álgebra lineal.
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Autovalores y autovectores -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingAutovalores">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAutovalores" aria-expanded="false" aria-controls="collapseAutovalores">
+                            <i class="fas fa-arrow-right"></i> Autovalores y autovectores
+                        </button>
+                    </h2>
+                    <div id="collapseAutovalores" class="accordion-collapse collapse" aria-labelledby="headingAutovalores" data-bs-parent="#conceptosFundamentales">
+                        <div class="accordion-body">
+                            Los autovalores y autovectores describen cómo una transformación lineal afecta a ciertos vectores de un espacio. Son fundamentales en la descomposición de matrices y en aplicaciones como la compresión de datos y la dinámica de sistemas.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <a href="gauss.html" class="btn btn-primary mt-3"><i class="fas fa-arrow-circle-right"></i> Continuar</a>
+            </div>
+        </section>
+        
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <p>&copy; 2024 Universidad Francisco de Paula Santander | Desarrollado para Ingeniería</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

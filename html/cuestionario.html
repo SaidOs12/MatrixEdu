@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuestionario Final</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="shortcut icon" href="https://i.ibb.co/rw903YN/2231431-removebg-preview.png" type="image/x-icon">
+    <script defer src="../js/cuestionario.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><i class="fas fa-calculator"></i> MatrixEdu</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-home"></i> Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-book"></i> Álgebra Lineal</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-table"></i> Gauss-Jordan</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-columns"></i> Método de Cramer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-layer-group"></i> Crout</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-stream"></i> Doolittle</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-square-root-alt"></i> Cholesky</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-calculator"></i> Calculadora de Ecuaciones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cruAL.htm"><i class="fas fa-tasks"></i> Actividades</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cuestionario.html"><i class="fas fa-question-circle"></i> Cuestionario Final</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <header class="bg-light py-5 text-center">
+        <h1 class="display-4">Cuestionario Final</h1>
+        <p class="lead">Ponte a prueba con 20 preguntas sobre álgebra lineal y los métodos estudiados. Necesitas al menos 14 correctas para aprobar.(Tiempo limite 20 minutos) </p>
+    </header>
+
+    <main class="container my-5">
+        <form id="quizForm">
+            <!-- Preguntas del cuestionario -->
+             <div class="container py-4">
+                <div class="mb-4">
+                    <h3>1. ¿Qué es una matriz?</h3>
+                    <div>
+                        <input type="radio" id="q1a" name="q1" value="a">
+                        <label for="q1a">Un conjunto de números distribuidos en filas y columnas.</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="q1b" name="q1" value="b">
+                        <label for="q1b">Un sistema de ecuaciones no lineales.</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="q1c" name="q1" value="c">
+                        <label for="q1c">Una función polinómica.</label>
+                    </div>
+                </div>
+            </div>
+            <div class="container py-4">
+                <div class="mb-4">
+                    <h3>2. ¿Cuál es el objetivo del método de Gauss-Jordan?</h3>
+                    <div>
+                        <input type="radio" id="q2a" name="q2" value="a">
+                        <label for="q2a">Resolver sistemas de ecuaciones mediante determinantes.</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="q2b" name="q2" value="b">
+                        <label for="q2b">Reducir una matriz a su forma escalonada reducida.</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="q2c" name="q2" value="c">
+                        <label for="q2c">Calcular la transpuesta de una matriz.</label>
+                    </div>
+                </div>
+            </div>
+                
+            <div class="container py-4">
+                <div class="mb-4">
+                    <h3>3. ¿Qué representa el determinante de una matriz cuadrada?</h3>
+                    <div>
+                        <input type="radio" id="q3a" name="q3" value="a">
+                        <label for="q3a">El número de soluciones de un sistema lineal asociado.</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="q3b" name="q3" value="b">
+                        <label for="q3b">El área o volumen definido por los vectores columna o fila.</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="q3c" name="q3" value="c">
+                        <label for="q3c">La suma de los elementos en la diagonal principal.</label>
+                    </div>
+                </div>
+            </div>
+                
+            <div class="container py-4">
+                <div class="mb-4">
+                    <h3>4. ¿Cuál es la diferencia principal entre los métodos de Crout y Doolittle?</h3>
+                    <div>
+                        <input type="radio" id="q4a" name="q4" value="a">
+                        <label for="q4a">Crout genera una matriz triangular superior con unos en la diagonal.</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="q4b" name="q4" value="b">
+                        <label for="q4b">Doolittle genera una matriz triangular inferior con unos en la diagonal.</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="q4c" name="q4" value="c">
+                        <label for="q4c">No hay diferencias significativas entre ambos métodos.</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="container py-4">
+                <div class="mb-4">
+                    <h3>5. ¿Qué condición debe cumplir una matriz para aplicar el método de Cholesky?</h3>
+                    <div>
+                        <input type="radio" id="q5a" name="q5" value="a">
+                        <label for="q5a">Debe ser simétrica y definida positiva.</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="q5b" name="q5" value="b">
+                        <label for="q5b">Debe ser triangular superior.</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="q5c" name="q5" value="c">
+                        <label for="q5c">Debe ser una matriz diagonal.</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="container py-4">
+                <div class="mb-4">
+                    <h3>6. En el método de Gauss-Jordan, ¿qué representa un pivote?</h3>
+                    <div>
+                        <input type="radio" id="q6a" name="q6" value="a">
+                        <label for="q6a">El elemento diagonal que se usa para hacer ceros arriba y abajo.</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="q6b" name="q6" value="b">
+                        <label for="q6b">La suma de todos los elementos de una fila.</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="q6c" name="q6" value="c">
+                        <label for="q6c">El determinante de la matriz.</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="container py-4">
+                <div class="mb-4">
+                    <h3>7. ¿Qué es una matriz singular?</h3>
+                    <div>
+                        <input type="radio" id="q7a" name="q7" value="a">
+                        <label for="q7a">Una matriz cuyo determinante es cero.</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="q7b" name="q7" value="b">
+                        <label for="q7b">Una matriz que solo tiene elementos positivos.</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="q7c" name="q7" value="c">
+                        <label for="q7c">Una matriz cuadrada.</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container py-4">
+                <div class="mb-4">
+                    <h3>8. ¿Qué condición debe cumplir una matriz para aplicar el método de Cholesky?</h3>
+                    <div>
+                        <input type="radio" id="q8a" name="q8" value="a">
+                        <label for="q8a">Debe ser simétrica y definida positiva.</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="q8b" name="q8" value="b">
+                        <label for="q8b">Debe ser triangular superior.</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="q8c" name="q8" value="c">
+                        <label for="q8c">Debe ser una matriz diagonal.</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="container py-4">
+                <div class="mb-4">
+                    <h3>9. En el método de Gauss-Jordan, ¿qué representa un pivote?</h3>
+                    <div>
+                        <input type="radio" id="q9a" name="q9" value="a">
+                        <label for="q9a">El elemento diagonal que se usa para hacer ceros arriba y abajo.</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="q9b" name="q9" value="b">
+                        <label for="q9b">La suma de todos los elementos de una fila.</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="q9c" name="q9" value="c">
+                        <label for="q9c">El determinante de la matriz.</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="container py-4">
+                <div class="mb-4">
+                    <h3>10. ¿Qué es una matriz singular?</h3>
+                    <div>
+                        <input type="radio" id="q10a" name="q10" value="a">
+                        <label for="q10a">Una matriz cuyo determinante es cero.</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="q10b" name="q10" value="b">
+                        <label for="q10b">Una matriz que solo tiene elementos positivos.</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="q10c" name="q10" value="c">
+                        <label for="q10c">Una matriz cuadrada.</label>
+                    </div>
+                </div>
+            </div>
+            <div class="container py-4">
+                <div class="mb-4">
+                    <h3>11. ¿Qué característica tiene una matriz triangular superior?</h3>
+                    <div>
+                        <input type="radio" id="q11a" name="q11" value="a">
+                        <label for="q8a">Todos los elementos por encima de la diagonal principal son cero.</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="q11b" name="q11" value="b">
+                        <label for="q11b">Todos los elementos por debajo de la diagonal principal son cero.</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="q11c" name="q11" value="c">
+                        <label for="q11c">Todos los elementos de la diagonal principal son uno.</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="container py-4">
+                <div class="mb-4">
+                    <h3>9. En el método de Crout, ¿qué elementos se establecen inicialmente?</h3>
+                    <div>
+                        <input type="radio" id="q12a" name="q12" value="a">
+                        <label for="q12a">Los elementos de la diagonal superior son uno.</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="q12b" name="q12" value="b">
+                        <label for="q12b">Los elementos de la diagonal inferior son uno.</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="q12c" name="q12" value="c">
+                        <label for="q12c">Los elementos de la diagonal principal son uno.</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="container py-4">
+                <div class="mb-4">
+                    <h3>13. ¿Cuál es una ventaja del método de Cholesky sobre otros métodos de factorización?</h3>
+                    <div>
+                        <input type="radio" id="q13a" name="q13" value="a">
+                        <label for="q13a">Requiere aproximadamente la mitad de operaciones que otros métodos.</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="q13b" name="q13" value="b">
+                        <label for="q13b">Puede aplicarse a cualquier matriz cuadrada.</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="q13c" name="q13" value="c">
+                        <label for="q13c">No requiere pivoteo.</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="container py-4">
+                <div class="mb-4">
+                    <h3>14. ¿Qué significa que un sistema de ecuaciones sea compatible determinado?</h3>
+                    <div>
+                        <input type="radio" id="q14a" name="q14" value="a">
+                        <label for="q14a">Tiene exactamente una solución.</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="q14b" name="q14" value="b">
+                        <label for="q14b">Tiene infinitas soluciones.</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="q14c" name="q14" value="c">
+                        <label for="q14c">No tiene solución.</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="container py-4">
+                <div class="mb-4">
+                    <h3>15. ¿Qué es una matriz simétrica?</h3>
+                    <div>
+                        <input type="radio" id="q15a" name="q15" value="a">
+                        <label for="q15a">Una matriz que es igual a su transpuesta.</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="q15b" name="q15" value="b">
+                        <label for="q15b">Una matriz que es igual a su inversa.</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="q15c" name="q15" value="c">
+                        <label for="q15c">Una matriz que tiene todos sus elementos iguales.</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="container py-4">
+                <div class="mb-4">
+                    <h3>16. ¿Cuándo se dice que una matriz es definida positiva?</h3>
+                    <div>
+                        <input type="radio" id="q16a" name="q16" value="a">
+                        <label for="q16a">Cuando todos sus elementos son positivos.</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="q16b" name="q16" value="b">
+                        <label for="q16b">Cuando todos sus valores propios son positivos.</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="q16c" name="q16" value="c">
+                        <label for="q16c">Cuando su determinante es positivo.</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="container py-4">
+                <div class="mb-4">
+                    <h3>17. En el método de Gauss-Jordan, ¿qué significa que una matriz esté en forma escalonada reducida?</h3>
+                    <div>
+                        <input type="radio" id="q17a" name="q17" value="a">
+                        <label for="q17a">Tiene unos en la diagonal principal y ceros arriba y abajo.</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="q17b" name="q17" value="b">
+                        <label for="q17b">Todos sus elementos son cero.</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="q17c" name="q17" value="c">
+                        <label for="q17c">Es una matriz triangular superior.</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="container py-4">
+                <div class="mb-4">
+                    <h3>18. ¿Qué es la factorización LU?</h3>
+                    <div>
+                        <input type="radio" id="q18a" name="q18" value="a">
+                        <label for="q18a">La descomposición de una matriz en el producto de una matriz triangular inferior y una superior.</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="q18b" name="q18" value="b">
+                        <label for="q18b">La suma de una matriz triangular inferior y una superior.</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="q18c" name="q18" value="c">
+                        <label for="q18c">La multiplicación de una matriz por su inversa.</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="container py-4">
+                <div class="mb-4">
+                    <h3>19. ¿Qué condición debe cumplirse para que un sistema tenga solución única usando el método de Cramer?</h3>
+                    <div>
+                        <input type="radio" id="q19a" name="q19" value="a">
+                        <label for="q19a">El determinante de la matriz de coeficientes debe ser diferente de cero.</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="q19b" name="q19" value="b">
+                        <label for="q19b">La matriz debe ser simétrica.</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="q19c" name="q19" value="c">
+                        <label for="q19c">La matriz debe ser triangular.</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="container py-4">
+                <div class="mb-4">
+                    <h3>20. ¿Cuál es una característica del método de Doolittle?</h3>
+                    <div>
+                        <input type="radio" id="q20a" name="q20" value="a">
+                        <label for="q20a">Los elementos de la diagonal de la matriz L son todos 1.</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="q20b" name="q20" value="b">
+                        <label for="q20b">Los elementos de la diagonal de la matriz U son todos 1.</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="q20c" name="q20" value="c">
+                        <label for="q20c">No requiere que la matriz sea no singular.</label>
+                    </div>
+                </div>
+            </div>
+            
+
+            <!-- Adding timer display -->
+            <div class="container">
+                <div class="alert alert-info text-center" role="alert">
+                    Tiempo restante: <span id="timer">20:00</span>
+                </div>
+            </div>
+        
+            <div class="text-center mt-5">
+                <button type="button" class="btn btn-primary btn-lg" id="submitQuiz">
+                    <i class="fas fa-paper-plane"></i> Enviar Respuestas
+                </button>
+            </div>
+        </form>
+    
+        <section id="resultSection" class="mt-5" style="display: none;">
+            <h2 class="text-success text-center"><i class="fas fa-check-circle"></i> Resultado</h2>
+            <p id="score" class="text-center lead"></p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <p>&copy; 2024 Universidad Francisco de Paula Santander | Ingeniería de Sistemas</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
