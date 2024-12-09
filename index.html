@@ -1,109 +1,237 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Sistema Estudiantil</title>
+    <title>Login</title>
+    <link rel="shortcut icon" href="https://i.ibb.co/rw903YN/2231431-removebg-preview.png" type="image/x-icon">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            margin: 0;
+            position: relative;
+            color: #333;
         }
-        
-        .login-container {
-            background: white;
+
+        /* Imagen de fondo con overlay oscuro */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://i.ibb.co/3v45hFZ/fondo-de-pantalla-de-laptop-estetica-azul-claro-71oypz6sl5jwiln1.jpg') no-repeat center center fixed;
+            background-size: cover;
+            z-index: -2; /* Imagen detrás de todo */
+        }
+
+        /* Capa oscura superpuesta */
+        body::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Ajusta el nivel de oscuridad con este valor */
+            z-index: -1; /* Capa detrás del contenido, pero encima de la imagen */
+        }
+
+        .container {
+            width: 700px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .logo {
+            background-color: #333; /* Gris oscuro */
+            padding: 20px;
+            text-align: center;
+        }
+
+        .logo img {
+            width: 150px; /* Ajusta el tamaño de la imagen del logo */
+        }
+
+        .form-container {
             padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.1);
-            width: 350px;
+            
         }
-        
-        .login-header {
+
+        .form-container h2 {
             text-align: center;
-            margin-bottom: 30px;
-        }
-        
-        .login-header h2 {
-            color: #2c3e50;
             margin-bottom: 10px;
+            font-size: 1.8em;
+            color: #333; /* Gris oscuro */
         }
         
-        .form-group {
-            margin-bottom: 20px;
+
+        .form-container form {
+            display: flex;
+            flex-direction: column;
         }
-        
-        label {
-            display: block;
-            margin-bottom: 8px;
-            color: #34495e;
-            font-weight: bold;
-        }
-        
-        input {
-            width: 100%;
-            padding: 10px;
-            border: 2px solid #ddd;
-            border-radius: 4px;
-            box-sizing: border-box;
-            transition: border-color 0.3s ease;
-        }
-        
-        input:focus {
-            border-color: #3498db;
-            outline: none;
-        }
-        
-        button {
-            width: 100%;
+
+        .form-container form input {
+            margin-bottom: 15px;
             padding: 12px;
-            background-color: #3498db;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
             font-size: 16px;
-            transition: background-color 0.3s ease;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            transition: all 0.3s;
         }
-        
-        button:hover {
-            background-color: #2980b9;
+
+        .form-container form input:focus {
+            border-color: #007bff;
+            outline: none;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
         }
-        
-        .error {
-            color: #e74c3c;
-            background-color: #fdeaea;
-            padding: 10px;
-            border-radius: 4px;
-            margin-bottom: 20px;
+
+        .form-container form button {
+            padding: 12px;
+            background-color: #333;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .form-container form button:hover {
+            background-color: #0056b3;
+        }
+
+        .toggle-link {
             text-align: center;
+            margin-top: 15px;
+            font-size: 0.9em;
+            color: #333;
+            cursor: pointer;
+        }
+
+        .toggle-link:hover {
+            text-decoration: underline;
+        }
+
+        .hidden {
+            display: none;
         }
     </style>
+    <script>
+        function toggleForms() {
+            const loginForm = document.getElementById('login-form');
+            const registerForm = document.getElementById('register-form');
+            loginForm.classList.toggle('hidden');
+            registerForm.classList.toggle('hidden');
+        }
+    </script>
 </head>
+
 <body>
-    <div class="login-container">
-        <div class="login-header">
-            <h2>Acceso Estudiantes</h2>
-            <p>Ingresa tus credenciales para acceder</p>
+    <div class="container">
+        <!-- Logo -->
+        <div class="logo">
+            <img src="https://i.ibb.co/rw903YN/2231431-removebg-preview.png" alt="Logo Matrix Edux">
         </div>
-        <div id="error-message" class="error" style="display: none;"></div>
-        <form method="POST" action="login.php">
-            <div class="form-group">
-                <label for="identificacion">Número de Identificación:</label>
-                <input type="text" id="identificacion" name="identificacion" required 
-                       placeholder="Ingresa tu número de identificación">
-            </div>
-            <div class="form-group">
-                <label for="password">Contraseña:</label>
-                <input type="password" id="password" name="password" required 
-                       placeholder="Ingresa tu contraseña">
-            </div>
-            <button type="submit">Iniciar Sesión</button>
-        </form>
+        <!-- Login Form -->
+        <div class="form-container" id="login-form">
+            <h2>Iniciar Sesión</h2>
+            <form id="loginForm">
+                <input type="text" name="username" placeholder="Usuario" required>
+                <input type="password" name="password" placeholder="Contraseña" required>
+                <button type="submit">Entrar</button>
+            </form>
+            <div class="toggle-link" onclick="toggleForms()">¿No tienes cuenta? Regístrate</div>
+        </div>
+        <div class="form-container hidden" id="register-form">
+            <h2>Registrarse</h2>
+            <form id="registerForm" style="width: 600px; margin: 0 auto; background-color: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                    <!-- Campo de selección de tipo de identificación -->
+                    <select name="tipoIdentificacion" required style="grid-column: span 2; padding: 10px; font-size: 16px; border: 1px solid #ccc; border-radius: 5px;">
+                        <option value="" disabled selected>Seleccione tipo de identificación</option>
+                        <option value="CC">CC</option>
+                        <option value="TI">TI</option>
+                        <option value="CE">CE</option>
+                    </select>
+                    <!-- Otros campos -->
+                    <input type="text" name="identificacion" placeholder="Identificación" required style="padding: 10px; font-size: 16px; border: 1px solid #ccc; border-radius: 5px;">
+                    <input type="email" name="correo" placeholder="Correo electrónico" required style="padding: 10px; font-size: 16px; border: 1px solid #ccc; border-radius: 5px;">
+                    <input type="password" name="contrasena" placeholder="Contraseña" required style="padding: 10px; font-size: 16px; border: 1px solid #ccc; border-radius: 5px;">
+                    <input type="text" name="nombre" placeholder="Nombre" required style="padding: 10px; font-size: 16px; border: 1px solid #ccc; border-radius: 5px;">
+                    <input type="text" name="apellido" placeholder="Apellido" required style="padding: 10px; font-size: 16px; border: 1px solid #ccc; border-radius: 5px;">
+                    <input type="text" name="telefono" placeholder="Teléfono" required style=" padding: 10px; font-size: 16px; border: 1px solid #ccc; border-radius: 5px;">
+                    <input type="number" name="codigo" placeholder="Codigo" required style=" padding: 10px; font-size: 16px; border: 1px solid #ccc; border-radius: 5px;">
+                    <select name="carrera" required style="grid-column: span 2; padding: 10px; font-size: 16px; border: 1px solid #ccc; border-radius: 5px;">
+                        <option value="" disabled selected>Seleccione la Carrera</option>
+                        <option value="ingSistemas">Ingenieria de Sistemas</option>
+                        <option value="ingCivil">Ingenieria Civil</option>
+                        <option value="ingElectroni">Ingenieria Electronica</option>
+                    </select>
+                    <!-- Botón -->
+                    <button type="submit" style="grid-column: span 2; padding: 10px; font-size: 16px; background-color: #333; color: #fff; border: none; border-radius: 5px; cursor: pointer;">Registrar</button>
+                </div>
+            </form>
+            
+            <div class="toggle-link" onclick="toggleForms()">¿Ya tienes cuenta? Inicia sesión</div>
+        </div>
     </div>
+    <script>
+        // Escuchar el evento submit del formulario de inicio de sesión
+        document.getElementById('loginForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Evitar el envío del formulario por defecto
+    
+            // Obtener los valores de los campos de texto
+            const username = this.username.value;
+            const password = this.password.value;
+    
+            // Verificar las combinaciones válidas
+            if (
+                (username === '1234567890' && password === 'contraseña1') ||
+                (username === '9876543210' && password === 'contraseña2')
+            ) {
+                // Redirigir a la página de inicio
+                window.location.href = 'html/home.html';
+            } else {
+                // Mostrar mensaje de error
+                alert('Usuario o contraseña incorrectos.');
+            }
+        });
+        document.getElementById('registerForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Evitar el envío del formulario por defecto
+    
+            // Verificar que todos los campos estén llenos
+            const inputs = this.querySelectorAll('input, select'); // Obtener todos los campos
+            let allFieldsFilled = true;
+    
+            inputs.forEach(input => {
+                if (!input.value) {
+                    allFieldsFilled = false; // Si algún campo está vacío, cambia el estado
+                }
+            });
+    
+            if (allFieldsFilled) {
+                // Mostrar mensaje de éxito
+                alert('Usuario creado con éxito');
+                // Redirigir a la página de inicio
+                window.location.href = 'html/home.html';
+            } else {
+                // Mostrar mensaje de error si hay campos vacíos
+                alert('Por favor, complete todos los campos.');
+            }
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    
 </body>
 </html>
