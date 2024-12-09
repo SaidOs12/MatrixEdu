@@ -1,95 +1,109 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Álgebra Lineal - Universidad Francisco de Paula Santander</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="shortcut icon" href="https://i.ibb.co/rw903YN/2231431-removebg-preview.png" type="image/x-icon">
+    <title>Login - Sistema Estudiantil</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        
+        .login-container {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            width: 350px;
+        }
+        
+        .login-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .login-header h2 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #34495e;
+            font-weight: bold;
+        }
+        
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            transition: border-color 0.3s ease;
+        }
+        
+        input:focus {
+            border-color: #3498db;
+            outline: none;
+        }
+        
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        
+        button:hover {
+            background-color: #2980b9;
+        }
+        
+        .error {
+            color: #e74c3c;
+            background-color: #fdeaea;
+            padding: 10px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#"><i class="fas fa-calculator"></i> MatrixEdu</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html"><i class="fas fa-home"></i> Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="html/algebra.html"><i class="fas fa-book"></i> Álgebra Lineal</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fas fa-table"></i> Gauss-Jordan</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fas fa-columns"></i> Método de Cramer</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fas fa-layer-group"></i> Crout</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fas fa-stream"></i> Doolittle</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fas fa-square-root-alt"></i> Cholesky</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fas fa-calculator"></i> Calculadora de Ecuaciones</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fas fa-tasks"></i> Actividades</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fas fa-question-circle"></i> Cuestionario Final</a>
-                    </li>
-                    
-                </ul>
-            </div>
+    <div class="login-container">
+        <div class="login-header">
+            <h2>Acceso Estudiantes</h2>
+            <p>Ingresa tus credenciales para acceder</p>
         </div>
-    </nav>
-    
-    <!-- Header -->
-    <header class="bg-light text-center py-5">
-        <div class="container">
-            <h1 class="display-4">Bienvenido al OVA de Álgebra Lineal</h1>
-            <p class="lead">Explora conceptos fundamentales, resuelve problemas prácticos y aprende de manera interactiva.</p>
-            <a href="html/algebra.html" class="btn btn-primary btn-lg mt-3"><i class="fas fa-arrow-circle-right"></i> Comenzar</a>
-        </div>
-    </header>
-
-    <!-- Main Content -->
-    <main class="container my-5">
-        <div class="row text-center">
-            <div class="col-md-4">
-                <i class="fab fa-buromobelexperte fa-3x text-primary mb-3"></i>
-                <h3>Introducción a los Sistemas de Ecuaciones Lineales</h3>
-                <p>Comprender qué son los sistemas de ecuaciones lineales y su relevancia en Ingeniería de Sistemas.</p>
+        <div id="error-message" class="error" style="display: none;"></div>
+        <form method="POST" action="login.php">
+            <div class="form-group">
+                <label for="identificacion">Número de Identificación:</label>
+                <input type="text" id="identificacion" name="identificacion" required 
+                       placeholder="Ingresa tu número de identificación">
             </div>
-            <div class="col-md-4">
-                <i class="fas fa-vector-square fa-3x text-success mb-3"></i>
-                <h3>Representación Matricial de Sistemas</h3>
-                <p>Aprender a representar un sistema de ecuaciones lineales en forma de matrices.</p>
+            <div class="form-group">
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" name="password" required 
+                       placeholder="Ingresa tu contraseña">
             </div>
-            <div class="col-md-4">
-                <i class="fas fa-chalkboard-teacher fa-3x text-warning mb-3"></i>
-                <h3>Metodologías Interactivas</h3>
-                <p>Accede a ejercicios prácticos y actividades para reforzar tus conocimientos.</p>
-            </div>
-        </div>
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-3">
-        <div class="container">
-            <p>&copy; 2024 Universidad Francisco de Paula Santander | Ingeniería de Sistemas</p>
-        </div>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+            <button type="submit">Iniciar Sesión</button>
+        </form>
+    </div>
 </body>
 </html>
